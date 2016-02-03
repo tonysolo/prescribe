@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "e-Health";
+}
+<h2>Patient List @ViewData["Title"]</h2>
+<p>Hello from our view template</p>
+<ul>
+    @for (var i = 0; i < (int)ViewData["NumTimes"]; i++)
+    {
+        //@ViewData = ViewData + " " + i;
+        <li>@ViewData["Message"]</li>
+    }
+    @*@ViewData.Model.*@
+</ul>
