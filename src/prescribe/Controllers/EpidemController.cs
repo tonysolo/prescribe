@@ -8,12 +8,13 @@ using Microsoft.AspNet.Mvc;
 
 namespace prescribe.Controllers
 {
-    public class Epidem : Controller
+    public class EpidemController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
+        // GET: /<controller>/      
+      public IActionResult Index()
         {
-            return View();
+            //string s = "Test";
+            return View("EpidemView");
         }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace prescribe.Controllers
 {
-    public class Ehealth : Controller
+    public class EhealthController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
