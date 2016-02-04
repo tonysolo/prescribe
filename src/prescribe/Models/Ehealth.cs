@@ -7,6 +7,14 @@ using Microsoft.Data.Entity.Design;
 
 namespace prescribe.Models
 {
+    public class Visit
+    {
+        public string Date { get; set; }
+        public string Description { get; set; }
+        public List<string> Images { get; set; } //location,image_type, TTLive
+
+    }
+
     public class Person
     {
         public string Id { get; set; }
@@ -23,13 +31,14 @@ namespace prescribe.Models
             Id = stn[0];
             FName = stn[1];
             SName = stn[2];
-
         }
     }
 
 
     public class Patient : Person
     {
+        public byte[] PopHmRisk { get; set; }
+
         public Patient(string str)
         {
             var stn = str.Split(',');

@@ -15,7 +15,7 @@ namespace prescribe.Controllers
         public IActionResult Index()
         {
             ViewData["message"] = "Hello " + "Tony";
-            ViewData["numtimes"] = 20;
+            ViewData["numtimes"] = 10;
             return  View();
         }
 
