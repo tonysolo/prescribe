@@ -11,7 +11,10 @@ namespace prescribe.Controllers
     public class EpidemController : Controller
     {
         // GET: /<controller>/      
-      public IActionResult Index()
+
+        public string test { get; set; }
+
+        public IActionResult Index()
         {
             //string s = "Test";
             return View("EpidemView");

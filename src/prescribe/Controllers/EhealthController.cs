@@ -13,7 +13,8 @@ namespace prescribe.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+
+            return View("EhealthView");
 
         }
     }

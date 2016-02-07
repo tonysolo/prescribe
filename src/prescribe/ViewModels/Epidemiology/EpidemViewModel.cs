@@ -7,6 +7,8 @@ namespace prescribe.ViewModels.Epidemiology
 {
     public class EpidemViewModel
     {
+        public string Test { get; set; }
 
     }
+   
 }
