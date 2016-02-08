@@ -8,6 +8,13 @@
 }
 
 <h2>@ViewData["Title"]</h2>
-
-
-
+<ul>
+    @for(var i = 0; i<10; i++)
+    {<li> @this.Model.IcDs</li>}
+</ul>
+<div class="container">
+<div class="jumbotron">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p>
+</div>
+</div>
