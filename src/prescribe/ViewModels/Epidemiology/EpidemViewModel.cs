@@ -34,7 +34,7 @@ namespace prescribe.ViewModels.Epidemiology
         public byte InOutPatient { get; set; }
         [Required]
         public byte DaysorVisits { get; set; }   
-    }
+    }  
 }
    
 

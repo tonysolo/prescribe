@@ -24,7 +24,6 @@ namespace prescribe.Controllers
             //string s = "Test";
             //return View("EpidemView");
         }
-
         public string Gender { get; set; }
 
         //(string)Epidemiolgy.Gender. ;

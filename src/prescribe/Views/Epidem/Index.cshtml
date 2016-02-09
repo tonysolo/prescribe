@@ -6,15 +6,26 @@
 @{
     ViewData["Title"] = "Epidemiology";
 }
-
 <h2>@ViewData["Title"]</h2>
-<ul>
-    @for(var i = 0; i<10; i++)
-    {<li> @this.Model.IcDs</li>}
-</ul>
+
+<body>
 <div class="container">
-<div class="jumbotron">
-    <h1>My First Bootstrap Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <form role="form">
+        <div class="form-group">
+            <label for="Gender"></label>
+            <input type="Gender" class="form-control" id="Gender" placeholder="Enter gender"/>
+            
+        </div>
+        <div class="form-group">
+            <label for="pwd"></label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+    </form>
 </div>
-</div>
+</body>
+
+
+
