@@ -12,8 +12,8 @@
 <div class="container">
     <form role="form">
         <div class="form-group">
-            <label for="Gender"></label>
-            <input type="Gender" class="form-control" id="Gender" placeholder="Enter gender"/>
+            <label for="gen"></label>
+            <input type="text" class="form-control" id="gen" placeholder="Enter gender"/>
             
         </div>
         <div class="form-group">
@@ -23,9 +23,24 @@
         <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
         </div>
+        <div>
+            <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+                Loading state
+            </button>
+
+            @*<Button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Single toggle
+            </button>*@
+        </div>
     </form>
 </div>
 </body>
 
 
-
+<script>
+  $('#myButton').on('click', function () {
+      var $btn = $(this).button('loading');
+    // business logic...
+      $btn.button('reset');
+  })
+</script>

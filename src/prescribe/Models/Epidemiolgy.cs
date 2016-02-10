@@ -7,21 +7,58 @@ namespace prescribe.Models
 {
     public class Epidemiolgy
     {
-        public enum Gender
+        public enum Genders
         {
-            Male,
-            Female = 1
+            Male, Female
         }
+
+        public enum AgeGroup
+        {
+            PremNeonate,
+            ExPrem,
+            Neonate,
+            LessThanThreeMonths,
+            LessThanOneYear,
+            OneToThreeYears,
+            ThreeToSixYears,
+            SixtoTwelveYears,
+            ThirteenToTwenty,
+            TwentyToForty,
+            FortyToSixty,
+            SixtyToEighty,
+            EightyPlus
+        }
+
+        public enum Treater
+        {
+            TraditionalHealer, HomeoPath, CommunityWorker, Therapist, ProfessionalNurse, GeneralPractitioner, Specialist
+        }
+
+        public enum SpecialtyType
+        {
+            PublicHealth, GeneralPractice, Anaesthetics, Surgery, ObstetsGynae, Orthopaedics, Neurology
+        }
+
+        public enum Facilitytype
+        {
+            GeneralPractice, OutpatientClinic, PublicHospital, PrivateHospital
+        }
+
+        public enum Treatmentmode
+        {
+            Inpatient, OutPatient
+        }
+
         public string IcDs { get; set; }
-        public byte AgeGroup { get; set; }
-        public byte Gend { get; set; }
+        public AgeGroup Age{ get; set; }
+        public Genders Gender { get; set; }
         public string RegionFrom { get; set; }
         public string RegionNow { get; set; }
-        public byte ReferredBy { get; set; }
-        public byte TreatedBy { get; set; }
-        public byte Specialty { get; set; }
-        public byte Facility { get; set; }
-        public byte InOutPatient { get; set; }
+        public Treater ReferredBy { get; set; }
+        public Treater TreatedBy { get; set; }
+        public SpecialtyType Specialty { get; set; }
+        public Facilitytype FacilityType { get; set; }
+        public Treatmentmode InOutPatient { get; set; }
         public byte DaysorVisits { get; set; }
     }
 }
