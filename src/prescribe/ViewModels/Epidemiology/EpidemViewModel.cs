@@ -35,12 +35,9 @@ namespace prescribe.ViewModels.Epidemiology
         public Epidemiolgy.Treatmentmode InOutPatient { get; set; }
         [Required]
         public byte DaysorVisits { get; set; }
-
         public string AzureQneRegion { get; set; }  //all epidemiolgy uses ghg account
-
         public string Href() //returns this to submit button to store in queue with secs to midnight delay
         {
-
             return "";
         }
     }  

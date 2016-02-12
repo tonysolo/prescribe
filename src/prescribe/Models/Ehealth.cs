@@ -18,8 +18,8 @@ namespace prescribe.Models
     public class Person
     {
         public string Id { get; set; }
-        public string FName { get; set; }
-        public string SName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         public Person()
         {
@@ -29,22 +29,24 @@ namespace prescribe.Models
         {
             var stn = str.Split(',');
             Id = stn[0];
-            FName = stn[1];
-            SName = stn[2];
+            FirstName = stn[1];
+            LastName = stn[2];
+           
         }
     }
 
 
     public class Patient : Person
     {
-        public byte[] PopHmRisk { get; set; }
+        public byte[] PopulationHealthRisk { get; set; }
+        public List<Visit> Visits { get; set; }
 
         public Patient(string str)
         {
             var stn = str.Split(',');
             Id = stn[0];
-            FName = stn[1];
-            SName = stn[2];
+            FirstName = stn[1];
+            LastName = stn[2];
         }
 
     }

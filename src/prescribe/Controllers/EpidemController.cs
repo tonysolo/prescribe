@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+//using System.Runtime.Remoting.Messaging;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.Dnx.Compilation.Caching;
 using prescribe.Models;
 using prescribe.ViewModels.Epidemiology;
 
@@ -22,23 +25,28 @@ using prescribe.ViewModels.Epidemiology;
 
 namespace prescribe.Controllers
 {
+
     public class EpidemController : Controller
     {
-        // GET: /<controller>/      
-
+        // GET: /Epidem/           
         public string Test { get; set; }
         public string Gen { get; set; }
 
+        [HttpGet]
         public IActionResult Index()
         {
+            var x = RouteData;
             var vm = new EpidemViewModel
             {
                 IcDs = "C52 B43 C56",
-                Treater = Epidemiolgy.Treater.Specialist
+               Treater = Epidemiolgy.Treater.Specialist,
+               RegionFrom = "qnnee",
+               RegionNow = "21233"
             };
-
             return View(vm);
         }
-       
+
+
+        
     }
 }

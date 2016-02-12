@@ -14,7 +14,7 @@
         <div class="form-group">
             <label for="gen"></label>
             <input type="text" class="form-control" id="gen" placeholder="Enter gender"/>
-            
+
         </div>
         <div class="form-group">
             <label for="pwd"></label>
@@ -23,24 +23,21 @@
         <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
         </div>
-        <div>
-            <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
-                Loading state
-            </button>
-
-            @*<Button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-            Single toggle
-            </button>*@
+        <div class="button">
+            <input type="submit" class="btn btn-info" value="Submit" id="submit">
         </div>
     </form>
 </div>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $("submit").bind("click", function(){
+        alert("The button was clicked.");
+    });
+});
+    </script>*@
+
 </body>
 
 
-<script>
-  $('#myButton').on('click', function () {
-      var $btn = $(this).button('loading');
-    // business logic...
-      $btn.button('reset');
-  })
-</script>
+

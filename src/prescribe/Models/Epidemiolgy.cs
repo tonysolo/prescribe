@@ -61,6 +61,7 @@ namespace prescribe.Models
         public Treatmentmode InOutPatient { get; set; }
         public byte DaysorVisits { get; set; }
     }
+    
 }
 
 
