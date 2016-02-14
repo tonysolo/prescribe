@@ -25,28 +25,39 @@ using prescribe.ViewModels.Epidemiology;
 
 namespace prescribe.Controllers
 {
-
+ [Route("[controller]")]
     public class EpidemController : Controller
     {
-        // GET: /Epidem/           
+        // GET: /Epidem/             
         public string Test { get; set; }
         public string Gen { get; set; }
 
-        [HttpGet]
+        [HttpGet("")]
         public IActionResult Index()
         {
             var x = RouteData;
             var vm = new EpidemViewModel
             {
-                IcDs = "C52 B43 C56",
+               IcDs = "C52 B43 C56",
                Treater = Epidemiolgy.Treater.Specialist,
                RegionFrom = "qnnee",
                RegionNow = "21233"
             };
             return View(vm);
         }
+[HttpPost]
+ public ActionResult Post()
+        {     
+            return Content("post invoked");
 
+        }
 
-        
+      [HttpPost("Stuff")]
+        public ActionResult Post([FromBody]string firstname)
+        {     
+            return Content("post stuff invoked");
+
+        }
+
     }
 }

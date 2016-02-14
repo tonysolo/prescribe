@@ -3,9 +3,11 @@
 @*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
 @{
-    ViewData["Title"] = "Epidemiology";
-}
+        ViewData["Title"] = "Epidemiology";
+    }
+
 <h2>@ViewData["Title"]</h2>
 
 <body>
@@ -13,8 +15,7 @@
     <form role="form">
         <div class="form-group">
             <label for="gen"></label>
-            <input type="text" class="form-control" id="gen" placeholder="Enter gender"/>
-
+            <input class="dropdown" id="gen" placeholder="Enter gender" value=@Epidemiolgy.Genders.Female>
         </div>
         <div class="form-group">
             <label for="pwd"></label>
@@ -28,14 +29,16 @@
         </div>
     </form>
 </div>
-    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>
-$(document).ready(function(){
-    $("submit").bind("click", function(){
+        $(document).ready(function () {
+            $('form#myForm').submit();
+        $("submit").bind("click", function () {
+            
         alert("The button was clicked.");
     });
 });
-    </script>*@
+    </script>
 
 </body>
 
