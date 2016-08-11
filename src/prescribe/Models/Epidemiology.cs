@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace prescribe.Models
 {
-    public class Epidemiolgy
+    public class Epidemiology
     {
         public enum Genders
         {
@@ -49,7 +49,9 @@ namespace prescribe.Models
             Inpatient, OutPatient
         }
 
-        public string IcDs { get; set; }
+
+        public string IcDs { get; set;}
+
         public AgeGroup Age{ get; set; }
         public Genders Gender { get; set; }
         public string RegionFrom { get; set; }

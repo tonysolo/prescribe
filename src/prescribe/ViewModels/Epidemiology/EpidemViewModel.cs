@@ -16,23 +16,23 @@ namespace prescribe.ViewModels.Epidemiology
         [Required]
         public string IcDs { get; set; }
         [Required]
-        public Epidemiolgy.AgeGroup AgeGroup { get; set; }
+        public Models.Epidemiology.AgeGroup AgeGroup { get; set; }
         [Required]
-        public Epidemiolgy.Genders Gender { get; set; }
+        public Models.Epidemiology.Genders Gender { get; set; }
         [Required]
         public string RegionFrom { get; set; }
         [Required]
         public string RegionNow { get; set; }
         [Required]
-        public Epidemiolgy.Treater ReferredBy { get; set; }
+        public Models.Epidemiology.Treater ReferredBy { get; set; }
         [Required]
-        public Epidemiolgy.Treater Treater{ get; set; }
+        public Models.Epidemiology.Treater Treater{ get; set; }
         [Required]
-        public Epidemiolgy.SpecialtyType Specialty{ get; set; }
+        public Models.Epidemiology.SpecialtyType Specialty{ get; set; }
         [Required]
-        public Epidemiolgy.Facilitytype Facility { get; set; }
+        public Models.Epidemiology.Facilitytype Facility { get; set; }
         [Required]
-        public Epidemiolgy.Treatmentmode InOutPatient { get; set; }
+        public Models.Epidemiology.Treatmentmode InOutPatient { get; set; }
         [Required]
         public byte DaysorVisits { get; set; }
         public string AzureQneRegion { get; set; }  //all epidemiolgy uses ghg account

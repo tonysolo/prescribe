@@ -27,6 +27,6 @@ namespace prescribe.Controllers
             ViewData["numtimes"] = numTimes;
             return View();
         }
-
+//HelloWorld/Welcome?Name=T Manicom&numTimes=5
     }
 }
