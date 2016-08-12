@@ -29,7 +29,8 @@ namespace prescribe.Controllers
  [Route("[controller]")]
     public class EpidemController : Controller
  {
-    private Epidemiology epi;
+     private Models.Epidemiology Epi { get; set; }
+ 
      // GET: /Epidem/             
      public string Test { get; set; }
 
@@ -38,16 +39,35 @@ namespace prescribe.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            epi = new Epidemiology();
-           
+            Epi = new Epidemiology
+            {
+                Age = Epidemiology.AgeGroup.Neonate,
+                DaysorVisits = 1,
+                FacilityType = Epidemiology.Facilitytype.GeneralPractice,
+                Gender = Epidemiology.Genders.Female,
+                IcDs = "X123",
+                InOutPatient = Epidemiology.Treatmentmode.Inpatient,
+                ReferredBy = Epidemiology.Treater.CommunityWorker,
+                RegionFrom = "",
+                RegionNow = "",
+                Specialty = Epidemiology.SpecialtyType.GeneralPractice
+            };
+
             var x = RouteData;
-            var vm = new EpidemViewModel();
-            //vm.Date = epi
-               IcDs = epi.IcDs;////"C52 B43 C56",
-               Treater = Epidemiology.Treater.Specialist,
-               RegionFrom = "qnnee",
-               RegionNow = "21233"
-            
+            var vm = new EpidemViewModel
+            {
+                Date = DateTime.Now,
+                AgeGroup = Epi.Age,
+                Gender = Epi.Gender,
+                IcDs = Epi.IcDs
+                 
+            };
+
+            // IcDs = "C52 B43 C56",
+            //  Treater = Epidemiology.Treater.Specialist,
+            //   RegionFrom = "qnnee",
+            //  RegionNow = "21233"
+        
             return View(vm);
         }
 [HttpPost]
